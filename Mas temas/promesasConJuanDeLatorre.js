@@ -1,5 +1,5 @@
 const userAutenth = new Promise(function (resolve, reject) {
-  let authent = 1;
+  let authent = false;
 
   if (authent) {
     resolve("usuario autenticado");
@@ -14,7 +14,7 @@ userAutenth
     console.log(resultado);
   })
   .catch((error) => {
-    console.log(error);
+    console.error(error);
   });
 
 // Existen 3 valores en promises:
