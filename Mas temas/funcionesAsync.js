@@ -16,22 +16,23 @@ async function funAsyncrona() {
   try {
     console.log("inicio del async");
 
-    // si no se pone await, cuadradoPromise va a retornar undefined, 
+    // si no se pone await, cuadradoPromise va a retornar undefined,
     // se tiene que esperar que llegue el valor
     let valor1 = await cuadradoPromise(6);
     console.log(
       `Funcion asyncrona ${valor1.value} otra es ${valor1.resultado}`
     );
 
-
-    valor1 =  cuadradoPromise(4);
+    valor1 = cuadradoPromise(4);
     console.log("(abajo esta la demostracion sin await)");
     console.log(
       ` Funcion asyncrona ${valor1.value} otra es ${valor1.resultado}`
-      );
-  } catch (error) {console.error(error)}
+    );
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 funAsyncrona();
 // hay que llamar a la funcion con el console.error
-// cuadradoPromise();
+cuadradoPromise();
